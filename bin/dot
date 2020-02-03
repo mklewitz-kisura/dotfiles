@@ -7,7 +7,6 @@
 
 set -e
 
-parameter=""
 
 parentDirectory="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P)"
 dotfilesDirectory="$(cd "$( dirname "$parentDirectory" )" && pwd -P)"
@@ -33,11 +32,7 @@ while test $# -gt 0; do
 			exec "$EDITOR" "$dotfilesDirectory"
 			exit
 			;;
-		"-w"|"--work")
-		    echo "*** Installing additinal work related applications and settings ***"
-		    parameter="work"
-		    ;;
-		*)
+\		*)
 			echo "Invalid option: $1"
 			displayUsageAndExit
 			;;
@@ -50,22 +45,25 @@ export ZSH=$HOME/.dotfiles
 # Set macOS defaults
 $ZSH/macos/set-defaults.sh
 
-# Install homebrew
+# If homebrew isn't installed yet -> install homebrew
 $ZSH/homebrew/install.sh 2>&1
 
 # Upgrade homebrew
 echo "› brew update"
 brew update
 
-# now we have to copy the "fixed versions" of casks back into 
-# place, so that we don't accidentally update 
+# We have to run this a second time, because it 
+# also copies the "frozen" casks into the homebrew
+# directory. If we wouldn't do this a second time,
+# we would overwrite the "frozen" casks with the latest
+# versions of them
 $ZSH/homebrew/install.sh 2>&1
 
 
 # Install software with 
 echo
 echo "-------------------------------------------"
-echo "Initiating brew with parameter '$parameter'"
+echo "Running ~/.dotfiles/script/install"
 echo "› $ZSH/script/install"
 echo "-------------------------------------------"
-$ZSH/script/install "$parameter"
+$ZSH/script/install
