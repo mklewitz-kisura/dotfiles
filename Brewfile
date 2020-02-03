@@ -214,12 +214,7 @@ cask 'yed'
 # apps from the appstore
 # mas 'BetterSnapTool', id: 417375580
 
-# is covered by MacOS since MacOS 10.15.1
-# mas 'Folder Compare', id: 535348544
 # mas 'Get Plain Text', id: 508368068
-# mas 'iMovie', id: 408981434
-# mas 'Keynote', id: 409183694
-# mas 'Numbers', id: 409203825
-# mas 'XCode', id: 497799835
+mas 'XCode', id: 497799835
 
 
