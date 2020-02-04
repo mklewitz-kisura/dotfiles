@@ -16,5 +16,3 @@ fi
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
 
-# in this section we symplink directories
-ln -s ~/Dropbox/personal/spoa/.aws ~/.aws
