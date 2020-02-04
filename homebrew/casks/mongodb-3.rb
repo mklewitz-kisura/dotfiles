@@ -7,7 +7,7 @@ cask 'mongodb-3' do
   appcast 'https://github.com/gcollazo/mongodbapp/releases.atom'
   name 'MongoDB'
   homepage 'http://elweb.co/mongodb-app/'
-  license :mit
+  # license :mit
 
   app 'MongoDB.app'
 

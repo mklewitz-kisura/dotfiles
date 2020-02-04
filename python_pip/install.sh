@@ -75,6 +75,17 @@ else
 	echo "   found nose in version $present"
 fi
 
+# Installing `docutils` package
+#
+present=`pip list | grep docutils | sed 's/^docutils\ *//'`
+if test ! $(echo $present)
+then
+	sudo -H pip install docutils
+else
+	echo "   found nose in version $present"
+fi
+
+
 function version { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
 
 # Installing `python-dateutil` package
