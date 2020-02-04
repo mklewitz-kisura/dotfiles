@@ -62,10 +62,23 @@
         editor = vim
 [apply]
         whitespace = nowarn
+[merge]
+	tool = smerge
 [mergetool]
+	prompt = false
         keepBackup = false
+[mergetool "smerge"]
+	cmd = smerge mergetool "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
+	trustExitCode = true
+
+[diff]
+	tool = smerge
 [difftool]
         prompt = false
+[difftool "smerge"]
+	cmd = smerge mergetool "$LOCAL" "$REMOTE"
+	trustExitCode = true
+
 [help]
         autocorrect = 1
 [push]
@@ -74,9 +87,10 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+
+#[difftool "sourcetree"]
+#	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#	path = 
+#[mergetool "sourcetree"]
+#	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+#	trustExitCode = true
