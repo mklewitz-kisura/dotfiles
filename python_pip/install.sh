@@ -91,7 +91,7 @@ function version { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4
 # Installing `python-dateutil` package
 #
 present=`pip list | grep python-dateutil | sed 's/^python-dateutil\ *//'`
-if [ $(version $present) -ge $(version "2.8.1") ]; then
+if [ $(version $present) -lt $(version "2.8.1") ]; then
 	sudo -H pip install --ignore-installed python-dateutil
 else
 	echo "   found python-dateutil in version $present"
@@ -130,7 +130,7 @@ fi
 echo
 echo "---------------------------------------------------"
 echo "********** Upgrading all python packages **********"
-sudo -H pip2 freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | xargs -n1 sudo -H pip2 install -U --user
+sudo -H pip2 freeze — local | grep -v ‘^\-e’ | cut -d = -f 1 | grep -v '^docutils$' | xargs -n1 sudo -H pip2 install -U --user
 echo " "
 echo " "
 echo "-----------------------------------------------------------------------------------------------------------"
