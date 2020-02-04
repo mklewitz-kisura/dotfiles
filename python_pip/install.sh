@@ -75,6 +75,16 @@ else
 	echo "   found nose in version $present"
 fi
 
+function version { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
+
+# Installing `python-dateutil` package
+#
+present=`pip list | grep python-dateutil | sed 's/^python-dateutil\ *//'`
+if [ $(version $present) -ge $(version "2.8.1") ]; then
+	sudo -H pip install --ignore-installed python-dateutil
+else
+	echo "   found python-dateutil in version $present"
+fi
 
 # Installing `botocore` package
 #
