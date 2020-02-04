@@ -162,8 +162,8 @@ export PATH="/usr/local/sbin:$PATH"
 
 # Set java version
 # https://www.kevinhooke.com/2017/10/05/switching-java-versions-on-mac-os/
-alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11` && export JRE_HOME=$(/usr/libexec/java_home -v 11  | sed 's/\.jdk/\.jre/') && export JRE=$(/usr/libexec/java_home -v 11  | sed 's/\.jdk/\.jre/')"
-alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8` && export JRE_HOME=$(/usr/libexec/java_home -v 1.8)/jre && export JRE=$(/usr/libexec/java_home -v 1.8)/jre"
-j8
+#alias j11="export JAVA_HOME=`/usr/libexec/java_home -v 11` && export JRE_HOME=$(/usr/libexec/java_home -v 11  | sed 's/\.jdk/\.jre/') && export JRE=$(/usr/libexec/java_home -v 11  | sed 's/\.jdk/\.jre/')"
+#alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8` && export JRE_HOME=$(/usr/libexec/java_home -v 1.8)/jre && export JRE=$(/usr/libexec/java_home -v 1.8)/jre"
+#j8
 
-PATH=/Users/tornow/.dotfiles/applications/bin:$PATH
+export PATH=/Users/tornow/.dotfiles/applications/bin:$PATH
