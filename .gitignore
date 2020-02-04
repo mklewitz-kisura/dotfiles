@@ -5,3 +5,5 @@ sublime/Packages/User/Package\ Control.cache/*
 *-wal
 *lockfile*
 *.lock.json
+git/gitconfig.local.symlink
+.idea

@@ -34,12 +34,13 @@
 #-------------------------------------------------------------#
 # Local/private configs go in the include section here
 #
-[includeIf "gitdir:~/.dotfiles/"]
-        path = ~/.dotfiles/git/.gitconfig
-[includeIf "gitdir:~/dev/adesso/"]
-        path = ~/dev/adesso/.gitconfig
-[includeIf "gitdir:~/dev/smings/"]
-        path = ~/dev/smings/.gitconfig
+[include]
+        path = ~/.gitconfig.local
+
+#[includeIf "gitdir:~/dev/adesso/"]
+#        path = ~/dev/adesso/.gitconfig
+#[includeIf "gitdir:~/dev/smings/"]
+#        path = ~/dev/smings/.gitconfig
 
 #-------------------------------------------------------------#
 
