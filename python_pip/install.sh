@@ -14,6 +14,17 @@ else
   sudo -H pip install --upgrade pip
 fi
 
+# now installing pip2
+if test ! $(which pip2)
+then
+  echo "  Installing `pip2` for you."
+  wget https://bootstrap.pypa.io/get-pip.py
+  sudo python2 get-pip.py
+  rm get-pip.py
+else
+  echo "  pip2 already installed."
+fi
+
 
 # Installing `requests` package
 #
@@ -41,6 +52,27 @@ then
 	sudo -H pip install lxml
 else
 	echo "   found lxml in version $present"
+fi
+
+
+# Installing `tornado` package
+#
+present=`pip list | grep tornado | sed 's/^tornado\ *//'`
+if test ! $(echo $present)
+then
+	sudo -H pip install tornado
+else
+	echo "   found tornado in version $present"
+fi
+
+# Installing `nose` package
+#
+present=`pip list | grep nose | sed 's/^nose\ *//'`
+if test ! $(echo $present)
+then
+	sudo -H pip install nose
+else
+	echo "   found nose in version $present"
 fi
 
 
