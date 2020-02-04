@@ -32,7 +32,7 @@ while test $# -gt 0; do
 			exec "$EDITOR" "$dotfilesDirectory"
 			exit
 			;;
-\		*)
+		*)
 			echo "Invalid option: $1"
 			displayUsageAndExit
 			;;
