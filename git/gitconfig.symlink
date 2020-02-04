@@ -76,7 +76,7 @@
 [difftool]
         prompt = false
 [difftool "smerge"]
-	cmd = smerge mergetool "$LOCAL" "$REMOTE"
+	cmd = smerge "$LOCAL" "$REMOTE"
 	trustExitCode = true
 
 [help]
