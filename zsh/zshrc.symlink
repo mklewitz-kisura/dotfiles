@@ -49,4 +49,11 @@ zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
 
+# solution to map ⌥ + ← / → and ⌘ + ← / → to work in iTerm2 as expected
+# Credits https://coderwall.com/p/a8uxma/zsh-iterm2-osx-shortcuts
+bindkey "[D" backward-word
+bindkey "[C" forward-word
+bindkey "^[a" beginning-of-line
+bindkey "^[e" end-of-line
+
 source ~/.bash_profile
