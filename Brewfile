@@ -125,6 +125,7 @@ cask 'alfred'
 cask 'adobe-acrobat-reader'
 # cask 'adobe-creative-cloud'
 # cask 'adobe-digital-editions'
+cask 'amazon-music'
 cask 'bartender'
 cask 'bettertouchtool'
 
