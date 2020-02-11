@@ -168,5 +168,5 @@ export PATH=~/.dotfiles/applications/bin:$PATH
 
 # Adding the unversioned python symlinks add the start of
 # the path
-PATH=/usr/local/opt/python/libexec/bin:$PATH
+PATH=/usr/local/opt/python/libexec/bin:~/Library/Python/3.7/bin:$PATH
 export PATH
