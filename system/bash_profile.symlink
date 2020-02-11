@@ -22,7 +22,7 @@ alias ip='dig @resolver1.opendns.com ANY myip.opendns.com +short'
 # AWS CLI aliases
 
 # current default profile is kisura with full access
-export AWS_DEFAULT_PROFILE="kisura-full-access"
+#export AWS_DEFAULT_PROFILE="kisura-full-access"
 
 awsp(){
   echo "Available Profiles:"
@@ -149,9 +149,6 @@ extract_audio(){
 
 # test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
-# setting python@2.7 
-PATH=$PATH:/Users/tornow/Library/Python/2.7/bin:/var/root/Library/Python/2.7/bin
-
 # setting mysql-client@5.7 (at least that is the version I get when I run `mysql --version`)
 PATH=$PATH:/usr/local/opt/mysql-client/bin
 
@@ -166,4 +163,10 @@ export PATH="/usr/local/sbin:$PATH"
 #alias j8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8` && export JRE_HOME=$(/usr/libexec/java_home -v 1.8)/jre && export JRE=$(/usr/libexec/java_home -v 1.8)/jre"
 #j8
 
-export PATH=/Users/tornow/.dotfiles/applications/bin:$PATH
+# adding application symlinks at the front of the path
+export PATH=~/.dotfiles/applications/bin:$PATH
+
+# Adding the unversioned python symlinks add the start of
+# the path
+PATH=/usr/local/opt/python/libexec/bin:$PATH
+export PATH
