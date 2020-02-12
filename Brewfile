@@ -42,6 +42,7 @@ brew 'gnupg2'
 brew 'grep'
 brew 'htop'
 # brew 'httrack'
+brew 'iproute2mac'
 brew 'mas'
 brew 'midnight-commander'
 # this is a keg only version. For using this, use 
