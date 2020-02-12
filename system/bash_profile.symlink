@@ -16,7 +16,7 @@
 alias ..='cd ..'
 alias ...='cd ~'
 
-alias ip='dig @resolver1.opendns.com ANY myip.opendns.com +short'
+alias my_current_ip='dig @resolver1.opendns.com ANY myip.opendns.com +short'
 
 ###############################################################################
 # AWS CLI aliases
