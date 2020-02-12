@@ -5,7 +5,7 @@
     <databaseInfo>
         <version>134481920</version>
         <UUID>C82729B8-9EA3-4C41-A814-43B1230ABBDE</UUID>
-        <nextObjectID>104</nextObjectID>
+        <nextObjectID>105</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -64,7 +64,7 @@
         <attribute name="resolution" type="string">{1920, 1080}</attribute>
         <attribute name="model" type="int32">824</attribute>
         <attribute name="maindisplay" type="int32">0</attribute>
-        <attribute name="displayid" type="int32">478167989</attribute>
+        <attribute name="displayid" type="int32">478167990</attribute>
         <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">539458A8-1680-4D8B-AD5A-D8EE5E2256F1</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
@@ -78,9 +78,23 @@
         <attribute name="resolution" type="string">{1920, 1080}</attribute>
         <attribute name="model" type="int32">23113</attribute>
         <attribute name="maindisplay" type="int32">0</attribute>
-        <attribute name="displayid" type="int32">458685146</attribute>
+        <attribute name="displayid" type="int32">458685145</attribute>
         <attribute name="builtin" type="bool">0</attribute>
         <attribute name="uniqueidentifier" type="string">135ED2C0-A423-45F0-A7BD-B701668464D1</attribute>
+        <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
+        <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
+    </object>
+    <object type="BSTCDISPLAY" id="z105">
+        <attribute name="vendor" type="int32">1552</attribute>
+        <attribute name="serialnumber" type="string">1611697590</attribute>
+        <attribute name="screensize" type="string">{530.08694856063175, 298.17390856535542}</attribute>
+        <attribute name="screenframe" type="string">{{0, 0}, {0, 0}}</attribute>
+        <attribute name="resolution" type="string">{0, 0}</attribute>
+        <attribute name="model" type="int32">41017</attribute>
+        <attribute name="maindisplay" type="int32">1</attribute>
+        <attribute name="displayid" type="int32">69733952</attribute>
+        <attribute name="builtin" type="bool">1</attribute>
+        <attribute name="uniqueidentifier" type="string">E3CABD3A-9CE2-461C-BFE5-7C750E9436A0</attribute>
         <relationship name="displayeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
         <relationship name="snappeddragpoints" type="0/0" destination="BSTDRAGPOINT"></relationship>
     </object>
